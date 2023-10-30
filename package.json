@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "webcaboblancoperu",
+  "version": "1.0.0",
+  "description": "Cabo Blanco Fishing Lodge SA Webpage",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Jose A. Carneiro",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

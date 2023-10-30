@@ -1,0 +1,36 @@
+@import "bootstrap/scss/functions";
+/* $font-family-sans-serif:'Work Sans', sans-serif; */
+
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+
+$body-color: #000000;
+
+$primary: #1d3347;
+$secondary: #1c9b90;
+
+$font-weight-bolder: 800;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1920px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1632px,
+);
+
+@import "bootstrap/scss/variables";
+// Esto se tiene que poner en bootstrap 5.3
+@import 'bootstrap/scss/variables-dark';
+
+/* $cdn: "https://d2irwxhydgwv41.cloudfront.net/"; */
