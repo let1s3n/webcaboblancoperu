@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { BsLinkedin } from "react-icons/bs";
+import ReactCountryFlag from "react-country-flag";
 const Home = () => {
   return (
     <Container
@@ -30,17 +31,27 @@ const Home = () => {
         </Col>
       </Row>
 
-      {/* <Row className="g-0 justify-content-around" style={{ rowGap: 2 + "rem" }}>
+      <Row className="g-0 justify-content-around" style={{ rowGap: 2 + "rem" }}>
         <p className="fs-5 fw-bold m-0 text-center">
-          Investment multinational focused on results for progress
+          The only sport fishing lodge in Peru in the best fishing area in the
+          world: CABO BLANCO
         </p>
-      </Row> */}
+      </Row>
 
       <Row className="g-0 justify-content-around" style={{ rowGap: 2 + "rem" }}>
         <Col xl={4}>
           <p className="m-0 text-center">
             Av. Circunvalación Del Golf Los Inkas 134 Panorama Centro
             Empresarial, Oficina 707 Torre 1 Santiago de Surco
+          </p>
+          <p className="m-0 text-center">
+            Lima PERÚ{" "}
+            <ReactCountryFlag
+              countryCode="PE"
+              svg
+              style={{ width: "1em", height: "auto" }}
+              title="PE"
+            />
           </p>
         </Col>
       </Row>
