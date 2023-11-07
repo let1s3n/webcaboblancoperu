@@ -7,15 +7,12 @@ const Home = () => {
   const [play, { stop, pause }] = useSound("/audio/wind.mp3");
   const buttonRef = useRef(null);
   useEffect(() => {
-    /* new AudioContext().resume().then(() => {
-      console.log("Here should start playing!");
-      play();
-    }); */
     buttonRef.current.addEventListener('click', handleClick);
     buttonRef.current.click();
   }, [buttonRef.current]);
 
   const handleClick = ()=>{
+    console.log("Play button was clicked!");
     play();
   }
   return (
