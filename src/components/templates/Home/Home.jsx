@@ -7,6 +7,7 @@ const Home = () => {
   const [play, { stop, pause }] = useSound("/audio/wind.mp3");
   const buttonRef = useRef(null);
   useEffect(() => {
+    new AudioContext().resume();
     console.log("Here should start playing!");
     play();
   }, [buttonRef.current]);
