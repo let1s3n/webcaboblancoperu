@@ -6,16 +6,10 @@ import ReactCountryFlag from "react-country-flag";
 const Home = () => {
   const [play, { stop, pause }] = useSound("/audio/wind.mp3");
   const buttonRef = useRef(null);
-
   useEffect(() => {
-    buttonRef.current.addEventListener("click", handleClick);
-    buttonRef.current.click();
-  }, [buttonRef.current]);
-
-  const handleClick = () => {
+    console.log("Here should start playing!");
     play();
-    console.log("Play button was clicked!");
-  };
+  }, [buttonRef.current]);
   return (
     <Container
       fluid
@@ -71,7 +65,7 @@ const Home = () => {
 
       <Row>
         <Col xs="auto">
-          <Button variant="light" ref={buttonRef}>
+          <Button variant="light" ref={buttonRef} onClick={play}>
             <BsFillPlayFill />
           </Button>
         </Col>
