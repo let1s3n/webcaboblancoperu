@@ -1,8 +1,21 @@
-import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import { BsLinkedin } from "react-icons/bs";
+import React, { useEffect, useRef } from "react";
+import useSound from "use-sound";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { BsLinkedin, BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 import ReactCountryFlag from "react-country-flag";
 const Home = () => {
+  const [play, { stop, pause }] = useSound("/audio/wind.mp3");
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    buttonRef.current.addEventListener("click", handleClick);
+    buttonRef.current.click();
+  }, [buttonRef.current]);
+
+  const handleClick = () => {
+    play();
+    console.log("Play button was clicked!");
+  };
   return (
     <Container
       fluid
@@ -53,6 +66,19 @@ const Home = () => {
               title="PE"
             />
           </p>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col xs="auto">
+          <Button variant="light" ref={buttonRef}>
+            <BsFillPlayFill />
+          </Button>
+        </Col>
+        <Col xs="auto">
+          <Button variant="light" onClick={() => pause()}>
+            <BsFillPauseFill />
+          </Button>
         </Col>
       </Row>
     </Container>
