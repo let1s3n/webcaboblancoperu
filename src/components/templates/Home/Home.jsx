@@ -7,14 +7,14 @@ const Home = () => {
   const [play, { stop, pause }] = useSound("/audio/wind.mp3");
   const buttonRef = useRef(null);
   useEffect(() => {
-    buttonRef.current.addEventListener('click', handleClick);
+    buttonRef.current.addEventListener("click", handleClick);
     buttonRef.current.click();
   }, [buttonRef.current]);
 
-  const handleClick = ()=>{
+  const handleClick = () => {
     console.log("Play button was clicked!");
     play();
-  }
+  };
   return (
     <Container
       fluid
@@ -53,8 +53,8 @@ const Home = () => {
       <Row className="g-0 justify-content-around" style={{ rowGap: 2 + "rem" }}>
         <Col xl={4}>
           <p className="m-0 text-center">
-            Av. Circunvalación Del Golf Los Inkas 134 Panorama Centro
-            Empresarial, Oficina 707 Torre 1 Santiago de Surco
+            Avenida Manuel Olguín N° 335 Oficina 1006 Edificio Link Tower
+            Santiago de Surco
           </p>
           <p className="m-0 text-center">
             Lima PERÚ{" "}
